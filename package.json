@@ -1,0 +1,23 @@
+{
+  "name": "lamp",
+  "version": "1.0.0",
+  "description": "智能电灯",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/semioe/lamp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/semioe/lamp/issues"
+  },
+  "homepage": "https://github.com/semioe/lamp#readme",
+  "dependencies": {
+    "bl": "^1.2.0",
+    "coap": "^0.20.0"
+  }
+}
