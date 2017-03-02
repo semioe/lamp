@@ -18,6 +18,7 @@
   "homepage": "https://github.com/semioe/lamp#readme",
   "dependencies": {
     "bl": "^1.2.0",
-    "coap": "^0.20.0"
+    "coap": "^0.20.0",
+    "nodegpio": "^1.0.7"
   }
 }

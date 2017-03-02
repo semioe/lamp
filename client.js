@@ -1,7 +1,7 @@
 const coap = require('coap');
 const BufferList = require('bl');
 
-var req = coap.request('coap://localhost/gpio_1/off');
+var req = coap.request('coap://localhost/gpio_1/on');
 req.setHeader("Accept", "application/json");
 req.on('response', function(res) {
     res.pipe(BufferList(function(err, data) {

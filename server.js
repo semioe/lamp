@@ -1,6 +1,6 @@
-const coap = require('coap'),
-    server = coap.createServer();
-
+const coap = require('coap');
+var server = coap.createServer();
+var nodegpio = require('nodegpio');
 server.on('request', function(req, res) {
     if (req.headers['Accept'] != 'application/json') {
         var error_json = JSON.stringify({
@@ -16,10 +16,17 @@ server.on('request', function(req, res) {
         gpio_number: gpio_number,
         gpio_status: gpio_status
     });
+    if(gpio_status===1||gpio_status==='on'||gpio_status==='ON'||gpio_status==='On'){
+      console.log('点亮',gpio_number);
+      nodegpio.high(gpio_number);
+    }else{
+      console.log('熄灭',gpio_number);
+      nodegpio.low(gpio_number);
+    }
     res.end(json);
     //res.end('Hello ' + req.url.split('/')[1] + '\n');
-    console.log(req);
-    console.log('');
+    //console.log(req);
+    //console.log('');
     console.log(json);
 })
 
